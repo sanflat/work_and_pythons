@@ -26,3 +26,30 @@ https://qiita.com/pooh-hey/items/1c20f740c3f028a631e9
   
 ・MAC起動時にWebサイトとappを自動で開く方法(note)  
 https://note.com/hey07/n/nc9b03378da09  
+
+## work_and_pythons/notify_of_query_results  
+**機能の概要**  
+クエリ結果をメッセージとして通知する  
+通知する方法として、SlackやGmailなどを想定している
+方法別にPythonプログラムを作成する
+
+**使う手順**  
+1. envファイルにDB接続情報（PostgreSQL）を記載する
+2. 通知する方法に応じてenvファイルに接続情報を記載する（例えばSlackであれば、Slack APIトークンや）
+3. 通知する方法に応じてPythonプログラムを実行する
+
+**事前準備（Slackで通知する場合）**  
+Slack APIから、アプリの作成とAPI_TOKENの取得を行う必要がある
+1. slack api(https://api.slack.com/) からアプリを作成
+2. Permissions -> Scopeからchat:write権限を追加
+3. slackワークスペースにアプリをインストール
+4. 通知するチャンネルにアプリを追加する
+5. Bot User OAuth Access TokenのAPI tokenを取得する
+
+**使用したモジュール**  
++ ワイルドカードを含むパスでファイルを取得する：https://docs.python.org/ja/3/library/glob.html
++ PostgreSQLへの接続：https://pypi.org/project/psycopg2/
++ 環境ファイルの設定値を取得する：https://docs.python.org/ja/3/library/os.html
++ 環境ファイルの設定値を読み込む：https://pypi.org/project/python-dotenv/
++ 環境ファイルの設定値を読み込む：https://pypi.org/project/python-dotenv/
++ Slackアプリとのやりとり：https://slack.dev/python-slack-sdk/
