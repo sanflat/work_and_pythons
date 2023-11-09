@@ -52,4 +52,5 @@ def notify_slack(channel):
 
 
 # アプリを追加し、メッセージを投稿したいチャンネル名を指定
-notify_slack("engineering")
+load_dotenv()
+notify_slack(os.environ["SLACK_CHANNEL"])
