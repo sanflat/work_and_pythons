@@ -53,3 +53,13 @@ Slack APIから、アプリの作成とAPI_TOKENの取得を行う必要があ�
 + 環境ファイルの設定値を読み込む：https://pypi.org/project/python-dotenv/
 + 環境ファイルの設定値を読み込む：https://pypi.org/project/python-dotenv/
 + Slackアプリとのやりとり：https://slack.dev/python-slack-sdk/
+
+**その他情報**  
+・クエリの結果を、Slackアプリに通知する  
+https://qiita.com/pooh-hey/items/e2c77a06a31f4f40a9ed  
+
+## work_and_pythons/ocr_to_db
+**機能の概要**  
+レシートデータを元にDBのデータを更新する  
+VisionAPIを使用し、OCRを取得  
+OCRから、料理に使う材料と金額を取得しDB更新を行う
